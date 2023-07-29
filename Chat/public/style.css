@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(20, 20, 20);
+}
+
+#header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(2, 136, 80);
+    margin-bottom: 5rem;
+    height: 10rem;
+    color: white;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: beige;
+    margin-bottom: 4rem;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12rem;
+    padding: 1rem;
+}
+
+.divh3{
+    display: flex;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(2, 136, 80);
+    color: white;
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.foot{
+    margin: 1rem;
+}
+
+.inputIngresar{
+    height: 4rem;
+    width: 8rem;
+    border-radius: 1rem;
+    background-color: rgb(1, 43, 1);
+    border: rgb(1, 43, 1);
+    color: white;
+}
+
+.ingresar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0rem 2rem 0rem;
+}
+
+.inputIngresar:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    background-color: rgb(1, 78, 1);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 18rem;
+    margin-right: 0rem;
+    background-color: rgb(39, 39, 39);
+    border-radius: 1rem;
+}
+
+.divForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.labelNombre{
+    margin-top: 2rem;
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.inputLogin{
+    margin-top: 1rem;
+    background-color: rgb(0, 0, 0);
+    border: black;
+    color: white;
+    height: 3rem;
+    border-radius: .5rem;
+}

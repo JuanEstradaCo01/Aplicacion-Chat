@@ -1,20 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="style.css">
     <title>Login</title>
 </head>
 <body>
     
-    <h1>Ingresa tu nombre para entrar al chat</h1>
+    <header id="header">     
+        <h1>🌫MyChat</h1> 
+    </header>
 
-    <form method="POST" action="/login">
-        <label for="nombre">Nombre:</label><input type="text" name="nombre" placeholder="Ingresa tu nombre">
+    <h2>Ingresa tu nombre para entrar en el chat:</h2>
 
-        <input type="submit" value="Ingresar">
-    </form>
+    <div class="divForm">
+        <form method="POST" action="/login">
+            <div class="login">
+                <label class="labelNombre" for="nombre">Nombre:</label><input class="inputLogin" type="text" name="nombre" placeholder="        Ingresa tu nombre">
+            </div>
+
+            <div class="ingresar">
+                <input type="submit" value="Ingresar"  class="inputIngresar">
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <div class="divh3">
+            <h3>🌫MyChat</h3>
+        </div>
+        <p class="foot">Aplicacion creada en el curso de Programacion-backend en CODERHOUSE por Juan Estrada</p>
+        <p class="foot">Todos los derechos reservados</p>
+    </footer>
 
 </body>
 </html>
