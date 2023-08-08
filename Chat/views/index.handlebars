@@ -8,24 +8,36 @@
 </head>
 <body>
 
-    <header id="header">     
+    <header id="headerChat">     
         <h1>🌫MyChat</h1> 
     </header>
+
+    <main>
+        <h2 class="h2enlinea">En linea</h2>
     
-    <p style="border: 5px solid rgb(0, 68, 0)" id="mensajesContenedor"></p>   
+        <div class="contenedorNotificaciones">
+            <p id="notificacionesContenedor"></p>
+        </div>
 
-    <input type="text" id="mensajeInput">
-    <input style="border-radius: 40%;" type="button" value="Enviar" id="mensajeEnviar">
+        <div class="divMensajes">
+            <p id="mensajesContenedor"></p>  
+        </div> 
+
+        <div id="barraBaja">
+            <input type="text" id="mensajeInput" placeholder="  Escribe un mensaje">
+            <input type="button" value="✔" id="mensajeEnviar">
+        </div>
+    </main>
     
 
-    <p style="border: 2px solid red" id="notificacionesContenedor"></p>
+    
 
 
-    <footer>
+    <!--<footer>
         <h3>🌫MyChat</h3>
         <p class="foot">Aplicacion creada en el curso de Programacion-backend en CODERHOUSE por Juan Estrada</p>
         <p class="foot">Todos los derechos reservados</p>
-    </footer>
+    </footer>-->
 
 </body>
 </html>

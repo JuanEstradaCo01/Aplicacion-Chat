@@ -1,6 +1,6 @@
 const express = require("express")
 const handlebars = require("express-handlebars")
-const viewsRouterFn = require("./routers/viewsRouter")
+const viewsRouterFn = require("./routers/chatViewsRouter")
 const socketServer = require("./utils/io")
 
 const app = express()
