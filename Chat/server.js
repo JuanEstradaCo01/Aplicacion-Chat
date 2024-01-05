@@ -2,11 +2,15 @@ const express = require("express")
 const handlebars = require("express-handlebars")
 const viewsRouterFn = require("./routers/chatViewsRouter")
 const socketServer = require("./utils/io")
+const cors = require("cors")
 
 const app = express()
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+
+//CORS:
+app.use(cors())
 
 //Configurando handlebars
 app.engine("handlebars", handlebars.engine())
@@ -16,9 +20,9 @@ app.set("view engine", "handlebars")
 app.use(express.static("public"))
 
 //SocketServer
-const puerto = 8080
+const PORT = process.env.PORT || 8080
 
-const httpServer = app.listen(puerto, () => console.log(`Listen on port ${puerto}`))
+const httpServer = app.listen(PORT, () => console.log(`Listen on port ${PORT}`))
 const io = socketServer(httpServer)
 
 const users = []
