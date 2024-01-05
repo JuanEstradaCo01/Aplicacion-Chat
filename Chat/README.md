@@ -1,1 +1,0 @@
-Aplicaion desplegada en el siguiente link: https://aplicacion-chat-production.up.railway.app/
