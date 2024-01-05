@@ -6,6 +6,9 @@ const viewsRouterFn = (io) => {
 
     const users = []
 
+    viewsRouter.get("/", (req, res) => {
+        return res.redirect("/login")
+    })
 
     viewsRouter.get("/login", (req, res) => {
         return res.render("login")
