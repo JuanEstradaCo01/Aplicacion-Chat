@@ -23,7 +23,7 @@ mensajeEnviar.addEventListener("click", () => {
   }
 })
 
-//Genero un color aleatorio para cada usuario:
+//Genero un color aleatorio:
 const color = "#" + ((1 << 24) * Math.random() | 0).toString(16);
 
 socket.on('mensaje', mensajeString => {

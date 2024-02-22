@@ -1,1 +1,1 @@
-Aplicación desplegada en el siguiente link: https://aplicacion-chat-production.up.railway.app/
+Aplicación desplegada en el siguiente link: https://chat-x3fx.onrender.com
