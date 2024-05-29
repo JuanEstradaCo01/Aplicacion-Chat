@@ -43,7 +43,7 @@ io.on("connection", socket => {
             socketId: socket.id
         })
         socket.broadcast.emit('notificacion', `${username} se ha unido al chat`)
-        socket.emit('notificacion', `Te has unido al chat como ${username}`)
+        socket.emit('notificacion', `¡Te has unido al chat como ${username}!`)
 
         //Para que un usuario nuevo vea todo el historial de mensajes (descomentar el emit y en la parte del frontend en index.js)
         //socket.emit('mensajes', JSON.parse(mensajesArray))

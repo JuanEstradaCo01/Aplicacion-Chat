@@ -1,15 +1,15 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     transition: all .3s;
 }
 
-body{
+body {
     background-color: rgb(20, 20, 20);
 }
 
-#header{
+#header {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@ body{
     color: white;
 }
 
-h2{
+h2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,7 @@ h2{
     margin-bottom: 4rem;
 }
 
-h3{
+h3 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,27 +35,27 @@ h3{
     padding: 1rem;
 }
 
-.divh3{
+.divh3 {
     display: flex;
 }
 
-footer{
+footer {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: rgb(2, 136, 80);
     color: white;
-    position:absolute;
+    position: absolute;
     bottom: 0;
     width: 100%;
 }
 
-.foot{
+.foot {
     margin: 1rem;
 }
 
-.inputIngresar{
+.inputIngresar {
     height: 4rem;
     width: 8rem;
     border-radius: 1rem;
@@ -64,7 +64,7 @@ footer{
     color: white;
 }
 
-.ingresar{
+.ingresar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,7 +77,7 @@ footer{
     background-color: rgb(1, 78, 1);
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     width: 18rem;
@@ -86,27 +86,27 @@ form{
     border-radius: 1rem;
 }
 
-.divForm{
+.divForm {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.login{
+.login {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.labelNombre{
+.labelNombre {
     margin-top: 2rem;
     color: white;
     font-size: 1.3rem;
     margin-bottom: 1rem;
 }
 
-.inputLogin{
+.inputLogin {
     margin-top: 1rem;
     background-color: rgb(0, 0, 0);
     border: black;
@@ -115,13 +115,12 @@ form{
     border-radius: .5rem;
 }
 
-
-.h2enlinea{
-    margin-bottom: 4rem;
+.h2enlinea {
+    margin: 2rem 0rem;
     color: rgb(2, 216, 2);
 }
 
-#headerChat{
+#headerChat {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,43 +130,40 @@ form{
     color: rgb(255, 255, 255);
 }
 
-.divMensajes{
-    background-color: rgb(58, 57, 57);
-    color: white;
-    margin: 2rem 1rem 0rem 1rem;
+.divMensajes {
+    background-color: rgb(32, 32, 32);
     border-radius: .5rem;
+    color: white;
+    margin: 2rem 3rem 0rem 3rem;
     font-size: 1.1rem;
     overflow-y: scroll;
-    height: 51vh;
     padding: 1.5rem;
-    p{
+    height: 55vh;
+    p {
         margin: .25rem 0rem;
     }
 }
 
-.contenedorNotificaciones{
+.contenedorNotificaciones {
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#barraBaja{
+#barraBaja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     width: 100%;
-    bottom: .5rem;
+    bottom: 0;
+    margin-bottom: .5rem;
 }
 
-@media screen and (max-width: 599px) {
-    #barraBaja{
-        display: flex;
-        flex-direction: row;
-    }
-}
-
-#mensajeInput{
+#mensajeInput {
     margin-left: .5rem;
-    width: 90%;
+    width: 80%;
     height: 3.5rem;
     font-size: 1.2rem;
     background-color: rgb(43, 42, 42);
@@ -176,9 +172,10 @@ form{
     border: rgb(43, 42, 42);
 }
 
-#mensajeEnviar{
-    min-width: 3rem;
+#mensajeEnviar {
+    width: 8%;
     height: 3.5rem;
+    margin-left: .5rem;
     background-color: rgb(13, 121, 13);
     border-color: rgb(20, 139, 20);
     color: white;
@@ -187,7 +184,26 @@ form{
     font-weight: bolder;
 }
 
-#mensajeEnviar:hover{
+#mensajeEnviar:hover {
     transform: scale(1.05);
     cursor: pointer;
+}
+
+@media screen and (max-width: 599px) {
+    #barraBaja {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #mensajeInput {
+        width: 80%;
+        height: 2.8rem;
+        font-size: 1rem;
+    }
+
+    #mensajeEnviar {
+        width: 8%;
+        height: 2.8rem;
+        font-size: 1rem;
+    }
 }
