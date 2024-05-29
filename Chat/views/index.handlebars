@@ -1,47 +1,26 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Chat</title>
-</head>
-<body>
+<header id="headerChat">
+    <h1>🌫MyChat</h1>
+</header>
 
-    <header id="headerChat">     
-        <h1>🌫MyChat</h1>
-    </header>
+<main>
+    <h2 class="h2enlinea">En linea</h2>
 
-    <main>
-        <h2 class="h2enlinea">En linea</h2>
-    
-        <div class="contenedorNotificaciones">
-            <p id="notificacionesContenedor"></p>
+    <div class="contenedorNotificaciones">
+        <p id="notificacionesContenedor"></p>
+    </div>
+
+    <div class="divMensajes">
+        <p id="mensajesContenedor"></p>
+    </div>
+
+    <form>
+        <div id="barraBaja">
+            <input type="text" id="mensajeInput" placeholder="  Escribe un mensaje">
+            <input type="reset" value=">" id="mensajeEnviar">
         </div>
+    </form>
 
-        <div class="divMensajes">
-            <p id="mensajesContenedor"></p>  
-        </div> 
-        
-        <form>
-            <div  id="barraBaja">
-                <input type="text" id="mensajeInput" placeholder="  Escribe un mensaje">
-                <input type="reset" value=">" id="mensajeEnviar">
-            </div>
-        </form>
-      
-    </main>
-
-    <!--<footer>
-        <h3>🌫MyChat</h3>
-        <p class="foot">Aplicacion creada en el curso de Programacion-backend en CODERHOUSE por Juan Estrada</p>
-        <p class="foot">Todos los derechos reservados</p>
-    </footer>-->
-
-</body>
-</html>
-
-
+</main>
 
 <script src="/socket.io/socket.io.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.3/qs.min.js"></script>

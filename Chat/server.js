@@ -3,6 +3,10 @@ const handlebars = require("express-handlebars")
 const viewsRouterFn = require("./routers/chatViewsRouter")
 const socketServer = require("./utils/io")
 const cors = require("cors")
+const MongoSingleton = require("./config/singleton")
+require("dotenv").config()
+const UserDao = require("./dao/UserDao")
+const userDao = new UserDao()
 
 const app = express()
 
@@ -19,6 +23,9 @@ app.set("view engine", "handlebars")
 
 app.use(express.static("public"))
 
+//Conexion a la base de datos:
+MongoSingleton.getConnection()
+
 //SocketServer
 const PORT = process.env.PORT || 8080
 
@@ -26,7 +33,6 @@ const httpServer = app.listen(PORT, () => console.log(`Listen on port ${PORT}`))
 const io = socketServer(httpServer)
 
 const users = []
-const mensajesArray = []
 
 io.on("connection", socket => {
     console.log("Nuevo cliente conectado", socket.id)
@@ -43,21 +49,33 @@ io.on("connection", socket => {
         //socket.emit('mensajes', JSON.parse(mensajesArray))
     })
 
-    socket.on('nuevoMensaje', mensaje => {
+    socket.on('nuevoMensaje', async mensaje => {
+        const usuarios = await userDao.getUsers()
         const usuario = users.find(u => u.socketId === socket.id)
-        const nuevoMensaje = {
-            mensaje,
-            usuario: usuario.nombre
+        const findUser = usuarios.find(item=>item.name === usuario.nombre)
+        
+        if(findUser){
+            const nuevoMensaje = {
+                mensaje,
+                usuario: findUser.name,
+                color: findUser.color
+            }
+    
+            return io.emit('mensaje', JSON.stringify(nuevoMensaje))
+        }else{
+            const nuevoMensaje = {
+                mensaje,
+                usuario: undefined
+            }
+    
+            return io.emit('mensaje', JSON.stringify(nuevoMensaje))
         }
-        mensajesArray.push(nuevoMensaje)
-
-        io.emit('mensaje', JSON.stringify(nuevoMensaje))
     })
 })
 
 app.get("/healthcheck", (req, res) => {
     return res.json({
-        status: "Corriendo",
+        status: "Running",
         date: new Date()
     })
 })

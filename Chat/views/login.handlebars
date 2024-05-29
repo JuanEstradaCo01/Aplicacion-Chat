@@ -1,37 +1,18 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Login</title>
-</head>
-<body>
-    
-    <header id="header">     
-        <h1>🌫MyChat</h1>
-    </header>
+<header id="header">
+    <h1>🌫MyChat</h1>
+</header>
 
-    <h2>Ingresa tu nombre para entrar en el chat:</h2>
+<h2>Ingresa tu nombre para entrar en el chat:</h2>
 
-    <div class="divForm">
-        <form method="POST" action="/login">
-            <div class="login">
-                <label class="labelNombre" for="nombre">Nombre:</label><input class="inputLogin" type="text" name="nombre" placeholder="        Ingresa tu nombre" required>
-            </div>
-
-            <div class="ingresar">
-                <input type="submit" value="Ingresar"  class="inputIngresar">
-            </div>
-        </form>
-    </div>
-
-    <footer>
-        <div class="divh3">
-            <h3>🌫MyChat</h3>
+<div class="divForm">
+    <form method="POST" action="/login">
+        <div class="login">
+            <label class="labelNombre" for="nombre">Nombre:</label><input class="inputLogin" type="text" name="nombre"
+                placeholder="        Ingresa tu nombre" required>
         </div>
-        <p class="foot">Aplicación creada por Juan Pablo Estrada</p>
-    </footer>
 
-</body>
-</html>
+        <div class="ingresar">
+            <input type="submit" value="Ingresar" class="inputIngresar">
+        </div>
+    </form>
+</div>

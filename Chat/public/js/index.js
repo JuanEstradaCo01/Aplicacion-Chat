@@ -1,6 +1,5 @@
 const socket = io()
 
-
 const mensajesContenedor = document.getElementById('mensajesContenedor')
 let mensajeInput = document.getElementById('mensajeInput')
 let mensajeEnviar = document.getElementById('mensajeEnviar')
@@ -23,14 +22,11 @@ mensajeEnviar.addEventListener("click", () => {
   }
 })
 
-//Genero un color aleatorio:
-const color = "#" + ((1 << 24) * Math.random() | 0).toString(16);
-
 socket.on('mensaje', mensajeString => {
   const mensajeObjeto = JSON.parse(mensajeString)
   mensajeInput.innerHTML = ""
   mensajesContenedor.innerHTML += `
-  <div style= "display: flex;"><p style="color: ${color}; font-weigth: bolder;">${mensajeObjeto.usuario}: </p> <p style="margin-left: .35rem;">${mensajeObjeto.mensaje}</p></div>
+  <div style= "display: flex;"><p style="font-weight: bolder; color: ${mensajeObjeto.color};">${mensajeObjeto.usuario}: </p> <p style="margin-left: .35rem;">${mensajeObjeto.mensaje}</p></div>
   `
 })
 
